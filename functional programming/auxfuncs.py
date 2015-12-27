@@ -1,5 +1,6 @@
 """
-A collection of auxiliary functions, i.e. some list access and higher-order functions and generators
+A collection of auxiliary functions, i.e. some list access and higher-order functions and generators.
+NOT necessarily compliant with functional programming standards
 """
 
 __author__ = 'Aurora'
