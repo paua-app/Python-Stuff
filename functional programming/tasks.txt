@@ -1,0 +1,58 @@
+Each of these tasks should be solved with a recursive approach, a tail recursive approach, and a HOF approach, resulting in three functions per task.
+
+
+Task 1:
+	Write a function that calculates the length of a list.
+	Example:
+		>>> print(length([1,2,3,4,5]))
+		5
+	
+Task 2:
+	Write a function that counts how often a given element appears in a list.
+	Example:
+		>>> print(count(3, [4,3,2,1,3]))
+		2
+		
+Task 3:
+	Write a function that, given two sorted lists, merges them to another sorted list.
+	Example:
+		>>> print(merge([2,3,4], [1,5]))
+		[1,2,3,4,5]
+		
+Task 4:
+	Write a function that returns two lists. One should contain all even numbers and one all odd numbers from the input.
+	Example:
+		>>> print(separate([1,2,3,4,5,6]))
+		[[2,4,6], [1,3,5]]
+		
+Task 5:
+	Write a function that determines the arithmetic average of a given list of numbers.
+	Example:
+		>>> print(avg([2,2,4,4]))
+		3.0
+		
+Task 6:
+	Write a function that, given a list of lists, calculates the average for each component.
+	All components are supposed to be of equal length.
+	Example:
+		>>> print(avg([10,5,3], [6,3,3], [2,7,-3]))
+		[6.0,5.0,1.0]
+		
+Task 7:
+	Write an own definition for the function 'append'.
+	Example:
+		>>> print(append([1,2], [3,4,5,6]))
+		[1,2,3,4,5,6]
+		
+Task 8:
+	Write a function that converts an integer into its binary representation.
+	Example:
+		>>> print(binary(42))
+		"101010"
+		
+Task 9:
+	Write a function that tests a list whether it is a palindrome.
+	The runtime should be in O(n).
+	Example:
+		>>> print(palindrome([1,2,5,2,1]))
+		True
