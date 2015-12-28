@@ -41,10 +41,11 @@ def my_len_tr(lst, acc=0):
         return my_len_tr(cdr(lst), acc+1)
 
 
-def my_len_hof(lst):
+def my_len_hof(f, lst):
     """
     Approach using Higher-Order Functions
     :rtype : integer
+    :param f: the function to be applied in order to determine the length of lst
     :param lst: a list of elements which length is to be determined
     :return: the length of lst
     """
@@ -67,4 +68,4 @@ def my_len_test():
                                          length,
                                          my_len_rec(lst),
                                          my_len_tr(lst),
-                                         my_len_hof(lst)))
+                                         my_len_hof(None, lst)))
