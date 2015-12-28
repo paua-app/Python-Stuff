@@ -25,7 +25,7 @@ def cdr(lst):
     """
     Returns the tail of the given list, meaning the entire list without the first element (head)
     :param lst:
-    :return:
+    :return: tail of lst
     """
     return lst[1:]
 
@@ -80,7 +80,7 @@ def build_random_list(length, interval_start_value, interval_end_value):
     :param interval_end_value: end value of the output list interval
     :return: a list with random integers within the given interval
     """
-    build_list_with_step(length, interval_start_value, interval_end_value, 1)
+    build_random_list_steps(length, interval_start_value, interval_end_value, 1)
 
 def build_random_list_steps(length, interval_start_value, interval_end_value, step):
     """
