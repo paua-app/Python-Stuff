@@ -29,11 +29,12 @@ def my_count_test():
     """
     ele = 1
     lst = brl(10, 0, 3)
-    return("Determining the length of {0}.\n"
-          "\tShould be: {1}\n"
-          "\tRecursive approach: {2}\n"
-          "\tTail-Recursive approach: {3}\n"
-          "\tHOF-approach: {4}".format(lst,
+    return("Determining occurances of {0} in {1}:.\n"
+           "\tshould be: {2}\n"
+           "\tRecursive approach: {3}\n"
+           "\tTail-Recursive approach: {4}\n"
+           "\tHOF-approach: {5}".format(lst,
+                                     ele,
                                      lst.count(ele),
                                      my_count_rec(ele, lst),
                                      my_count_tr(ele, lst),
