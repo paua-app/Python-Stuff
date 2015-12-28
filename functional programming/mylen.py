@@ -19,8 +19,9 @@ def my_len_rec(lst):
     :param lst: a list of elements which length is to be determined
     :return: the length of lst
     """
+    # noinspection PyBroadException
     try:
-        if lst == []:
+        if not lst:
             return 0
         else:
             return 1 + my_len_rec(cdr(lst))
@@ -51,8 +52,9 @@ def my_len_tr_aux(lst, acc):
     :param acc: counter for the length
     :return: the length of lst
     """
+    # noinspection PyBroadException
     try:
-        if lst == []:
+        if not lst:
             return acc
         else:
             acc += 1
@@ -83,12 +85,12 @@ def my_len_test():
     """
     length = 10
     lst = bl(length)
-    return("Determining the length of {0}.\n"
-          "\tShould be: {1}\n"
-          "\tRecursive approach: {2}\n"
-          "\tTail-Recursive approach: {3}\n"
-          "\tHOF-approach: {4}".format(lst,
-                                     length,
-                                     my_len_rec(lst),
-                                     my_len_tr(lst),
-                                     my_len_hof(lst)))
+    return ("Determining the length of {0}.\n"
+            "\tShould be: {1}\n"
+            "\tRecursive approach: {2}\n"
+            "\tTail-Recursive approach: {3}\n"
+            "\tHOF-approach: {4}".format(lst,
+                                         length,
+                                         my_len_rec(lst),
+                                         my_len_tr(lst),
+                                         my_len_hof(lst)))

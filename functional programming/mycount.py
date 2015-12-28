@@ -6,7 +6,7 @@ __author__ = 'Aurora'
 
 
 def my_count_rec(e, lst):
-    if lst == []:
+    if not lst:
         return 0
     else:
         if car(lst) == [e]:
@@ -18,8 +18,10 @@ def my_count_rec(e, lst):
 def my_count_tr(e, lst):
     return None
 
+
 def my_count_hof(e, lst):
     return None
+
 
 def my_count_test():
     """
@@ -29,13 +31,13 @@ def my_count_test():
     """
     ele = 1
     lst = brl(10, 0, 3)
-    return("Determining occurances of {0} in {1}:.\n"
-           "\tshould be: {2}\n"
-           "\tRecursive approach: {3}\n"
-           "\tTail-Recursive approach: {4}\n"
-           "\tHOF-approach: {5}".format(lst,
-                                     ele,
-                                     lst.count(ele),
-                                     my_count_rec(ele, lst),
-                                     my_count_tr(ele, lst),
-                                     my_count_hof(ele, lst)))
+    return ("Determining occurrences of {0} in {1}:.\n"
+            "\tshould be: {2}\n"
+            "\tRecursive approach: {3}\n"
+            "\tTail-Recursive approach: {4}\n"
+            "\tHOF-approach: {5}".format(lst,
+                                         ele,
+                                         lst.count(ele),
+                                         my_count_rec(ele, lst),
+                                         my_count_tr(ele, lst),
+                                         my_count_hof(ele, lst)))

@@ -7,6 +7,7 @@ from random import randrange as rr
 
 __author__ = 'Aurora'
 
+
 def car(lst):
     """
     Returns the first element (head) of the given list, if it is not empty, else False
@@ -15,11 +16,14 @@ def car(lst):
     """
     return lst[:1]
 
+
 def first(lst):
     return car(lst)
 
+
 def head(lst):
     return car(lst)
+
 
 def cdr(lst):
     """
@@ -29,11 +33,14 @@ def cdr(lst):
     """
     return lst[1:]
 
+
 def rest(lst):
     return cdr(lst)
 
+
 def tail(lst):
     return cdr(lst)
+
 
 def last(lst):
     """
@@ -41,13 +48,15 @@ def last(lst):
     :param lst: the list of which the last element should be returned
     :return: the last element of lst
     """
+    # noinspection PyBroadException
     try:
-        if lst == []:
+        if not lst:
             return False
-        return lst[len(lst)-1]
+        return lst[len(lst) - 1]
     except:
         print("Error: Not a list!")
         return False
+
 
 def build_list(length):
     """
@@ -56,6 +65,7 @@ def build_list(length):
     :return: a list of length length
     """
     return build_list_with_step(length, 1)
+
 
 def build_list_with_step(length, step):
     """
@@ -68,9 +78,10 @@ def build_list_with_step(length, step):
     i = 0
     while len(lst) < length:
         if i % step == 0:
-             lst.append(i)
+            lst.append(i)
         i += 1
     return lst
+
 
 def build_random_list(length, interval_start_value, interval_end_value):
     """
@@ -81,6 +92,7 @@ def build_random_list(length, interval_start_value, interval_end_value):
     :return: a list with random integers within the given interval
     """
     return build_random_list_steps(length, interval_start_value, interval_end_value, 1)
+
 
 def build_random_list_steps(length, interval_start_value, interval_end_value, step):
     """
