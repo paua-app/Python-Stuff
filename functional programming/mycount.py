@@ -12,11 +12,17 @@ def my_count_rec(e, lst):
         if car(lst) == [e]:
             return my_count_rec(e, cdr(lst)) + 1
         else:
-            return my_count_rec(e, cdr(lst)) + 0  #
+            return my_count_rec(e, cdr(lst)) + 0
 
 
-def my_count_tr(e, lst):
-    return None
+def my_count_tr(e, lst, acc=0):
+    if not lst:
+        return acc
+    else:
+        if car(lst) == [e]:
+            return my_count_tr(e, cdr(lst), acc + 1)
+        else:
+            return my_count_tr(e, cdr(lst), acc)
 
 
 def my_count_hof(e, lst):
