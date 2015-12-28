@@ -80,7 +80,7 @@ def build_random_list(length, interval_start_value, interval_end_value):
     :param interval_end_value: end value of the output list interval
     :return: a list with random integers within the given interval
     """
-    build_random_list_steps(length, interval_start_value, interval_end_value, 1)
+    return build_random_list_steps(length, interval_start_value, interval_end_value, 1)
 
 def build_random_list_steps(length, interval_start_value, interval_end_value, step):
     """
