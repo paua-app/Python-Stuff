@@ -83,7 +83,7 @@ def my_len_test():
     """
     length = 10
     lst = bl(length)
-    print("Determining the length of {0}.\n"
+    return("Determining the length of {0}.\n"
           "\tShould be: {1}\n"
           "\tRecursive approach: {2}\n"
           "\tTail-Recursive approach: {3}\n"
@@ -92,5 +92,3 @@ def my_len_test():
                                      my_len_rec(lst),
                                      my_len_tr(lst),
                                      my_len_hof(lst)))
-
-my_len_test()
