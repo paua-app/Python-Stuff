@@ -3,6 +3,8 @@ A collection of auxiliary functions, i.e. some list access and higher-order func
 NOT necessarily compliant with functional programming standards
 """
 
+from random import randrange as rr
+
 __author__ = 'Aurora'
 
 def car(lst):
@@ -68,4 +70,28 @@ def build_list_with_step(length, step):
         if i % step == 0:
              lst.append(i)
         i += 1
+    return lst
+
+def build_random_list(length, interval_start_value, interval_end_value):
+    """
+    Creates a list with random integer elements within a certain interval
+    :param length: integer: length of the output list
+    :param interval_start_value: start value of the output list interval
+    :param interval_end_value: end value of the output list interval
+    :return: a list with random integers within the given interval
+    """
+    build_list_with_step(length, interval_start_value, interval_end_value, 1)
+
+def build_random_list_steps(length, interval_start_value, interval_end_value, step):
+    """
+    Creates a list with random integer elements within a certain interval
+    :param length: integer: length of the output list
+    :param interval_start_value: start value of the output list interval
+    :param interval_end_value: end value of the output list interval
+    :param: step: the smallest possible difference between two elements
+    :return: a list with random integers within the given interval
+    """
+    lst = []
+    while len(lst) < length:
+        lst.append(rr(interval_start_value, interval_end_value, step))
     return lst
