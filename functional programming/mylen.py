@@ -79,7 +79,7 @@ def my_len_test():
     """
     Test for all three functions
     :rtype: string
-    :return: None
+    :return: the test message and a return value of all three main functions (which should be equal)
     """
     length = 10
     lst = bl(length)
