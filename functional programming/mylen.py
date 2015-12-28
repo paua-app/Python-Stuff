@@ -19,52 +19,26 @@ def my_len_rec(lst):
     :param lst: a list of elements which length is to be determined
     :return: the length of lst
     """
-    # noinspection PyBroadException
-    try:
-        if not lst:
-            return 0
-        else:
-            return 1 + my_len_rec(cdr(lst))
-    except TypeError:
-        return "Error! Incompatible Types in Function: mylen::my_len_rec"
-    except ValueError:
-        return "Error! Bad value in Function: mylen::my_len_rec"
-    except:
-        return "Error! Unknown Exception in Function mylen::my_len_rec"
+    if not lst:
+        return 0
+    else:
+        return 1 + my_len_rec(cdr(lst))
 
 
-def my_len_tr(lst):
+def my_len_tr(lst, acc=0):
     """
-    Tail-Recursive approach (init).
-    :rtype: integer
-    :param lst: a list of elements which length is to be determined
-    :return: the length of lst
-    """
-    my_len_tr_aux(lst, 0)
-
-
-def my_len_tr_aux(lst, acc):
-    """
-    Auxiliary function for Tail-Recursive approach.
+    Tail-Recursive approach.
     Features a counter for the list length, which is returned when the list is iterated over completely
+    Default value 0 as neutral element for addition.
     :rtype: integer
     :param lst: List of which the length is required
-    :param acc: counter for the length
+    :param acc: counter for the length. Should be left blank at function call.
     :return: the length of lst
     """
-    # noinspection PyBroadException
-    try:
-        if not lst:
-            return acc
-        else:
-            acc += 1
-            return my_len_tr_aux(cdr(lst), acc)
-    except TypeError:
-        return "Error! Incompatible Types in Function: mylen::my_len_tr"
-    except ValueError:
-        return "Error! Bad value in Function: mylen::my_len_tr"
-    except:
-        return "Error! Unknown Exception in Function mylen::my_len_tr"
+    if not lst:
+        return acc
+    else:
+        return my_len_tr(cdr(lst), acc+1)
 
 
 def my_len_hof(lst):
