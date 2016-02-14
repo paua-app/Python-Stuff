@@ -1,8 +1,25 @@
+"""
+Task:
+    Write a function that counts how often a given element appears in a list.
+    Example:
+       #>>> print(count(3, [4,3,2,1,3]))
+        2
+"""
+
+
 from auxfuncs import car
 from auxfuncs import cdr
 from auxfuncs import build_random_list as brl
 
 __author__ = 'Aurora'
+
+
+def my_count_imp(e, lst):
+    count = 0
+    for i in lst:
+        if e == i:
+            count += 1
+    return count
 
 
 def my_count_rec(e, lst):

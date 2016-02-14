@@ -1,3 +1,12 @@
+"""
+Task 3:
+    Write a function that, given two sorted lists, merges them to another sorted list.
+    Example:
+       #>>> print(merge([2,3,4], [1,5]))
+        [1,2,3,4,5]
+"""
+
+
 from auxfuncs import car
 from auxfuncs import cdr
 

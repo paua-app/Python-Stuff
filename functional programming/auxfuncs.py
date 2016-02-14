@@ -107,3 +107,7 @@ def build_random_list_steps(length, interval_start_value, interval_end_value, st
     while len(lst) < length:
         lst.append(rr(interval_start_value, interval_end_value, step))
     return lst
+
+
+def curry(f, arg):
+    return (lambda x: f(x))

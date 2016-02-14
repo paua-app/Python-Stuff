@@ -8,8 +8,18 @@ Task:
 
 from auxfuncs import cdr
 from auxfuncs import build_list as bl
+from auxfuncs import curry
 
 __author__ = 'Aurora'
+
+
+def my_len_imp(lst):
+    temp = 0
+    i = 0
+    while lst[i] != None:
+        temp += 1
+        i += 1
+    return temp
 
 
 def my_len_rec(lst):
@@ -41,7 +51,7 @@ def my_len_tr(lst, acc=0):
         return my_len_tr(cdr(lst), acc+1)
 
 
-def my_len_hof(f, lst):
+def my_len_hof(lst):
     """
     Approach using Higher-Order Functions
     :rtype : integer
@@ -49,7 +59,7 @@ def my_len_hof(f, lst):
     :param lst: a list of elements which length is to be determined
     :return: the length of lst
     """
-    return False
+    return reduce(lst, 0)
 
 
 def my_len_test():
